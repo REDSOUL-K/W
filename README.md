@@ -1,82 +1,131 @@
-# 🧠 ZEGE — Web-Based IDE with AI Coding Assistant
+# ZEGE — Web-Based IDE with AI Coding Assistant
 
-> **Type:** Full-Stack Web IDE  
-> **Audience:** Developers, Students, Coders, Tech Learners  
+## Overview
+**ZEGE** is a full-stack web-based IDE that allows users to write, run, and debug code directly from the browser.  
+It supports multiple programming languages and integrates AI code assistants — **ChatGPT**, **Gemini**, and **Blackbox** — for generating, explaining, and improving code in real time.
 
-![ZEGE Banner](https://via.placeholder.com/1000x300?text=ZEGE+-+AI+Powered+Web+IDE)
-<p align="center">
-  <a href="#🚀-features">Features</a> •
-  <a href="#⚙️-tech-stack">Tech Stack</a> •
-  <a href="#🧩-project-structure">Project Structure</a> •
-  <a href="#💻-setup--installation">Setup</a> •
-  <a href="#🧠-future-enhancements">Future Enhancements</a> •
-  <a href="#📜-license">License</a>
-</p>
+Designed for developers, students, and learners, ZEGE provides a seamless, intelligent coding environment for learning, experimenting, and rapid prototyping.
 
 ---
 
-## 📄 Project Description
+## Core Features
 
-**ZEGE** is a **modern web-based IDE** that enables users to **write, run, and debug code** in multiple programming languages — all directly from the browser.
+### Code Editor
+- Monaco Editor with syntax highlighting  
+- Language selection (Python, JavaScript, C++, Java, etc.)  
+- Optional file management and tabbed editing  
 
-What makes ZEGE stand out is its **integration of three powerful AI code assistants** — **ChatGPT**, **Gemini**, and **Blackbox** — giving developers the ability to **generate, explain, and improve code instantly**.
+### Code Execution
+- Secure backend execution using Docker containers  
+- Real-time output with stdout and stderr  
+- Error tracking and runtime diagnostics  
 
-ZEGE combines:
-- 🐳 **Real-time execution** using Docker containers for secure sandboxing  
-- 🧠 **AI-powered coding** for speed, learning, and creativity  
-- 💡 **A sleek, responsive frontend** for smooth developer experience  
+### AI Integration
+- Integrated ChatGPT, Gemini, and Blackbox assistants  
+- Code generation, debugging, and explanation features  
+- Side-by-side AI response comparison  
 
----
+### Output Console
+- Displays execution results in real time  
+- Auto-scroll and clear console functionality  
 
-## 🌟 Core Features
-
-### 🧱 Code Editor
-- Integrated **Monaco Editor** with syntax highlighting  
-- **Language selection** (Python, JavaScript, C++, Java, etc.)  
-- (Optional) **File handling** and tabbed editing  
-
-### 🚀 Code Execution
-- Secure backend using **Docker containers**  
-- Real-time **stdout/stderr** output  
-- **Error tracking** and runtime details  
-
-### 🤖 AI Assistant Integration
-- Toggle between **ChatGPT**, **Gemini**, and **Blackbox**  
-- Features: code generation, debugging, explanation  
-- Compare **AI responses side-by-side**  
-
-### 📤 Output Console
-- Displays **real-time execution results**  
-- **Auto-scroll**, **clear console**, and error highlighting  
-
-### 🌗 Optional Enhancements
-- Light/Dark **theme toggle**  
-- **User authentication** (Firebase/Auth0)  
-- **Save & share code snippets** (MongoDB/Firestore)
+### Optional Enhancements
+- Light/Dark mode toggle  
+- User authentication (Firebase or Auth0)  
+- Save and share code snippets (MongoDB or Firestore)
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
-**Frontend:**
-- React.js + Vite
+**Frontend**
+- React.js (Vite)
 - Monaco Editor
-- Tailwind CSS / ShadCN UI
+- Tailwind CSS or ShadCN UI
 
-**Backend:**
-- Node.js + Express  
+**Backend**
+- Node.js with Express  
 - Docker (for sandboxed code execution)  
-- WebSocket / REST API for output streaming  
+- WebSocket / REST API for real-time communication  
 
-**AI Integration:**
+**AI Integration**
 - OpenAI API (ChatGPT)  
 - Gemini API  
 - Blackbox AI API  
 
-**Database (Optional):**
-- MongoDB Atlas or Firestore  
+**Database (Optional)**
+- MongoDB Atlas or Firebase Firestore  
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
+ZEGE/
+├── frontend/ # React-based UI
+│ ├── src/
+│ │ ├── components/ # Editor, Console, AI Assistant
+│ │ ├── pages/ # Home, Settings, Auth
+│ │ └── App.jsx
+│ └── package.json
+│
+├── backend/ # Express server
+│ ├── routes/ # Code execution & AI routes
+│ ├── controllers/ # Logic for AI & Docker handling
+│ ├── docker/ # Sandbox scripts
+│ └── server.js
+│
+└── README.md
+
+yaml
+Copy code
+
+---
+
+## Setup & Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/ZEGE_CODE.git
+cd ZEGE_CODE
+2. Install Dependencies
+bash
+Copy code
+# Frontend
+cd frontend
+npm install
+
+# Backend
+cd ../backend
+npm install
+3. Run the Application
+bash
+Copy code
+# Start Backend
+cd backend
+npm run dev
+
+# Start Frontend
+cd ../frontend
+npm run dev
+4. Environment Configuration
+Create .env files in both frontend/ and backend/ folders:
+
+ini
+Copy code
+OPENAI_API_KEY=your_openai_key
+GEMINI_API_KEY=your_gemini_key
+BLACKBOX_API_KEY=your_blackbox_key
+Future Enhancements
+Multi-file project management
+
+Live collaboration and pair programming
+
+AI-powered code refactoring
+
+Terminal input support
+
+Built-in Git integration
+
+Contributing
+Contributions, feedback, and feature requests are welcome.
+Please open a pull request or issue on the GitHub repository.
